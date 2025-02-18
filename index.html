@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!--FORMATO DE UNIFICACION DE CARACTERES"UNICODE" BASICAMENTE EL FORMATO  DE MI WEB -->
+    <title>FORMULARIO</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--En pocas palabras si defines también el atributo content después del atributo viewport en la misma etiqueta meta con el valor: "width=device-width, initial-scale=1" le estamos diciendo a nuestro sitio web que ancho máximo de nuestra página web será el ancho del dispositivo desde donde se esté aperturando el sitio web (móvil, tablet, pc).-->
+</head>
+<body>
+    <form>
+        <h2>
+            FORMULARIO DE CONTACTO
+        </h2> 
+        <Fieldset>
+            <legend>INFORMACION BASICA</legend>
+        <!--SIMPLE INPUT-->       
+        <div class="form_input">
+        <label for="nombre"> Nombre Completo
+            <input type="name" placeholder="Julio  Espinoza" id="nombre"> 
+        </label>  
+            </div> 
+             <!--los input nos piden lo diferentes tipos de datos-->
+            <div class="form_input">
+                <label for="email">Tu Email 
+                    <input type="email" placeholder="ejemplo@gmail.com" id="email">
+                </label>
+                </div>
+                <div class="form_input">
+                    <label for="asunto">Asunto 
+                        <input type="asunto" placeholder="El asunto de tu mensaje" id="asunto">
+                    </label>
+                    </div>
+            </fieldset>
+            <!--el label y el id se conectan, damos click sobre el titulo en este caso sobre "email" o "nombre" hace foco en el renglon y podemos escribir -->
+<!--SELECT Y OPTION-->
+            <div class="form_input">
+                <label> Tipo de usuario  
+                <select name="type-of-user"> 
+                    <option value="user1">opcion1</option>
+                    <option value="user2">opcion2</option>
+                    <option value="user3">opcion3</option>
+                </select>
+                </label>
+                </div>
+                <!-- podrioa haber puesto input,option y select en el mismo renglon del css pero en la "option" habia que cambiar 
+                 el fondo de forma independiente -->
+                
+<!--DATALIST Y OPTION -->
+                <div class="form_input">
+                    <label> Referente  
+                    <input list="referente" name="referente">
+                    <datalist id="referente"  name="type-of-user"> 
+                        <option value="JULIO">EL CAPO </option>
+                        <option value="MARICEL">MI AMOL </option>
+                        <option value="YVO">NO HAY INTERNET </option>
+                    </datalist>
+                    </label>
+                    </div>
+                
+<!--TEXTAREA-->
+            <div> 
+            <label class="uno" for="Mensaje">Mensaje</label>
+            <textarea placeholder="Deja tu mensaje..."id="Mensaje"></textarea>
+            <!--fijate bien los espacios por que sino el textarea no se puede ver "deja tu mensaje" cerralo con el textarea sin dejar espacios-->
+            <!-- la clase "uno" tiene que ver con el label del textarea, por que sino no me quedaba bien configurado.-->
+            </div>
+ <!--checkbox-->
+            <div class="form_input">
+                <label  for="check" >Acepto los terminos y Condiciones</label>
+                <input type="checkbox" class="checkbox" id="check">
+            </div>
+    </form>
+    
+</body>
+</html>
